@@ -13,11 +13,13 @@ public class WeatherStation extends Observable {
 		_data = data;
 		setChanged();
 		onValueChange();
+		
 	}
 	
 	public void onValueChange()
 	{
 		this.notifyObservers(_data);
+		this.clearChanged();
 	}
 	
 }
